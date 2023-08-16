@@ -6,8 +6,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { userSchema } from './user/user.Schema';
 import { UserService } from './user/user.service';
 import { ProductModule } from './product/product.module';
+import { OrderModule } from './order/order.module';
 @Module({
-  imports: [UserModule,MongooseModule.forRoot('mongodb://127.0.0.1:27017/users'), ProductModule],
+  imports: [UserModule,MongooseModule.forRoot('mongodb://127.0.0.1:27017/users'), ProductModule, OrderModule],
   controllers: [AppController],
   providers: [AppService],
 })
