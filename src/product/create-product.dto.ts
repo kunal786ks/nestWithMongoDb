@@ -1,20 +1,14 @@
-import { IsNotEmpty,IsNumber,IsString,MaxLength } from "class-validator";
+import { IsNumber,IsString,IsNotEmpty,MaxLength } from "class-validator";
+ import { user } from "src/user/user.schema";
+
 export class CreateProductDto{
 
-    @IsString()
-    @MaxLength(30)
-    @IsNotEmpty()
-    readonly name:string
+    	@IsNotEmpty()
+        @IsString()
+        readonly name: string
 
-    @IsString()
-    @IsNotEmpty()
-    readonly description:string
 
-    @IsNumber()
-    @IsNotEmpty()
-    readonly quantity:number
-
-    @IsNumber()
-    @IsNotEmpty()
-    readonly stock:number
+        @IsString()
+        @IsNotEmpty()
+        readonly owner: user
 }
