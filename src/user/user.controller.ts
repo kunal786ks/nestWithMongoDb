@@ -15,7 +15,7 @@ export class UserController {
             return response.status(HttpStatus.CREATED).json({
                 message:'student created succesfully',
                 newUser
-            })
+            })   
         }catch(err){
             return response.status(HttpStatus.BAD_REQUEST).json({
                 statusCode: 400,
